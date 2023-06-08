@@ -64,7 +64,6 @@ export class GameInfoComponent implements OnChanges {
     this.split = this.card.split("_");
     this.card = this.split[1];
     this.index = Number(this.card) - 1;
-    // this.title = this.cardAction[this.index].title;
-    // this.description = this.cardAction[this.index].description;
+
   }
 }
