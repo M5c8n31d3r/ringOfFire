@@ -15,16 +15,16 @@ class="player-position"></app-player>
 
         <!-- Card sack -->
         <img *ngFor="let c of [0,1,2,3,4]; let i = index;" [ngStyle]="{'right.px': i * 5}"
-            src="/assets/img/cards/card_cover(1).png">
+            src="assets/img/cards/card_cover(1).png">
         <img (click)="takeCard()"  class="top-card" style="right: 25px"
-            src="/assets/img/cards/card_cover(1).png">
+            src="assets/img/cards/card_cover(1).png">
 
         <!-- Stack for played cards -->
-        <img *ngFor="let card of game.playedCards" class="played-card" src="/assets/img/cards/{{ card }}.png">
+        <img *ngFor="let card of game.playedCards" class="played-card" src="assets/img/cards/{{ card }}.png">
 
         <!-- Current card (Animation) -->
          <img (click)="takeCard()" *ngIf="pickCardAnimation" class="pick-card top-card" style="right: 25px"
-            src="/assets/img/cards/{{ currentCard }}.png">
+            src="assets/img/cards/{{ currentCard }}.png">
     </div>
 </div>
 
