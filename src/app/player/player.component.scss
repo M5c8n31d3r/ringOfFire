@@ -13,13 +13,18 @@
     }
 
 
-    background-color: rgb(0, 134, 96);
+    background-color: rgb(100, 100, 100, 0.8);
 
     img{
-        width: 100px;
-        height: 100px;
+        width: 70px;
+        // width: auto;
+        height: 70px;
         object-fit: cover;
 
     }
+}
 
+
+.player-active {
+    background-color: rgb(0, 150, 60) !important;
 }

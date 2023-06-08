@@ -19,3 +19,5 @@ describe('DialogAddPlayerComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+

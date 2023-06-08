@@ -1,4 +1,5 @@
-<h1 mat-dialog-title>Add new Player </h1>
+<div class="dialog">
+<h1 mat-dialog-title>Add new Player 👤</h1>
 <div mat-dialog-content>
   <p>Please enter the name of a player.</p>
   <mat-form-field>
@@ -8,5 +9,8 @@
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button [mat-dialog-close]="" cdkFocusInitial>Ok</button>
+  <button mat-button [disabled]="name.length == 0" [mat-dialog-close]="name" cdkFocusInitial>Ok</button>
 </div>
+</div>
+
+<!-- 👤 -->
