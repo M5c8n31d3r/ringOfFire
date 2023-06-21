@@ -1,4 +1,5 @@
 export const environment = {
+  useEmulators: true,
   firebase: {
     // projectId: 'ringoffire-c3914',
     // appId: '1:115730478903:web:09e9cf7e4bc7e613ac4cb2',
@@ -13,4 +14,5 @@ export const environment = {
   messagingSenderId: "115730478903",
   appId: "1:115730478903:web:09e9cf7e4bc7e613ac4cb2"
   },
+  production: false
 };

@@ -30,7 +30,8 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     GameComponent,
     PlayerComponent,
     DialogAddPlayerComponent,
-    GameInfoComponent
+    GameInfoComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -54,3 +55,4 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 })
 
 export class AppModule { }
+
