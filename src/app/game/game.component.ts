@@ -36,7 +36,7 @@ export class GameComponent implements OnInit {
 
   ngOnInit(): void {
     this.newGame();
-    this.route.params.subscribe((params) => {
+    this.route.params.subscribe((params) => { 
       console.log(params['id']);
       this.gameId = params['id'];
 
@@ -70,18 +70,22 @@ export class GameComponent implements OnInit {
     if (!this.pickCardAnimation) {
          this.currentCard = this.game.stack.pop();
          console.log(this.currentCard);
-         this.pickCardAnimation = true;
-         
+         this.game.pickCardAnimation = true;
+
          console.log('New card: ' + this.currentCard);
          console.log('Game is', this.game);
 
          this.game.currentPlayer++;
          this.game.currentPlayer = this.game.currentPlayer % this.game.players.length;
 
+         this.saveGame();
+
 
     setTimeout(()=>{
       this.game.playedCards.push(this.currentCard);
-      this.pickCardAnimation = false;
+      this.game.pickCardAnimation = false;
+      this.saveGame();
+
      }, 1000);
     }
    }
@@ -104,7 +108,7 @@ export class GameComponent implements OnInit {
     const db = getFirestore();
     const docRef = doc(db, 'games', this.gameId);
     updateDoc(docRef, this.game.toJson()).then((res) => {
-      console.log('Speichern erfolgreich! ', res);
+      console.log('Saved successfully!', res);
     });
   }
 }
