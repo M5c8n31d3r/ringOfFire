@@ -1,6 +1,13 @@
 {
+  "functions": {
+    "source": "functions"
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
   "hosting": {
-    "public": "src",
+    "public": "dist/ring-of-fire",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -12,12 +19,5 @@
         "destination": "/index.html"
       }
     ]
-  },
-  "functions": {
-    "source": "functions"
-  },
-  "firestore": {
-    "rules": "firestore.rules",
-    "indexes": "firestore.indexes.json"
   }
 }

@@ -1,13 +1,4 @@
 {
-  "targets": {
-    "ringoffire-c3914": {
-      "hosting": {
-        "ringOfFire": [
-          "ringoffire-c3914"
-        ]
-      }
-    }
-  },
   "projects": {
     "default": "ringoffire-c3914"
   }
